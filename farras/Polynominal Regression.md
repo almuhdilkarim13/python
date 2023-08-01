@@ -61,22 +61,27 @@ y = [100,90,80,60,60,55,60,65,70,70,75,76,78,79,90,99,99,100]
 
 NumPy mempunyai metode yang dapat digunakan untuk membuat model polinomial:
 ```mymodel = numpy.poly1d(numpy.polyfit(x, y, 3))
+
 ```
 
 Kemudian, menentukan bagaimana garis akan disajikan, kita mulai dari posisi 1, dan berakhir pada posisi 22:
 ``` myline = numpy.linspace(1, 22, 100)
+
 ```
 
 Gambarlah  sebaran plot  aslinya:
 ``` plt.scatter(x, y)
+
 ```
 
  Gambarlah garis regresi polinomial:
 ``` plt.plot(myline, mymodel(myline))
+
 ```
 
 Tampilan diagram:
 ``` plt.show()
+
 ```
 
 **R-Squared**
