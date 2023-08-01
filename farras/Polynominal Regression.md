@@ -47,7 +47,7 @@ Hasilnya :
 ![img_polynomial_regression](https://github.com/gitfah/docs-python/assets/119867794/07009204-8250-4001-b6f7-76e3817430ed)
 
 COntoh dan Penjelasan
-pertama pilihlah ,odul yang anda butuhkan
+pertama pilihlah ,modul yang anda butuhkan
 anda dapat memahami tentang modul **Numpy** yang bisa diakses di [tutorial NumPy](https://www.w3schools.com/python/numpy/default.asp)
 anda bisa mempelajari **SciPy** yang tersedia di [tutorial SciPy](https://www.w3schools.com/python/scipy_intro.asp)
 
