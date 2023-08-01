@@ -48,8 +48,8 @@ Hasilnya :
 
 COntoh dan Penjelasan
 pertama pilihlah ,odul yang anda butuhkan
-anda dapat memahami tentang modul **Numpy** yang bisa diakses di [tutorial NumPy] (https://www.w3schools.com/python/numpy/default.asp)
-anda bisa mempelajari **SciPy** yang tersedia di [tutorial SciPy] (https://www.w3schools.com/python/scipy_intro.asp)
+anda dapat memahami tentang modul **Numpy** yang bisa diakses di [tutorial NumPy](https://www.w3schools.com/python/numpy/default.asp)
+anda bisa mempelajari **SciPy** yang tersedia di [tutorial SciPy](https://www.w3schools.com/python/scipy_intro.asp)
 
 ```import numpy
 import matplotlib.pyplot as plt
