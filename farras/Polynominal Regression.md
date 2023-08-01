@@ -61,27 +61,22 @@ y = [100,90,80,60,60,55,60,65,70,70,75,76,78,79,90,99,99,100]
 
 NumPy mempunyai metode yang dapat digunakan untuk membuat model polinomial:
 ```mymodel = numpy.poly1d(numpy.polyfit(x, y, 3))
-
 ```
 
 Kemudian, menentukan bagaimana garis akan disajikan, kita mulai dari posisi 1, dan berakhir pada posisi 22:
-``` myline = numpy.linspace(1, 22, 100)
-
+```myline = numpy.linspace(1, 22, 100)
 ```
 
 Gambarlah  sebaran plot  aslinya:
-``` plt.scatter(x, y)
-
+```plt.scatter(x, y)
 ```
 
  Gambarlah garis regresi polinomial:
-``` plt.plot(myline, mymodel(myline))
-
+```plt.plot(myline, mymodel(myline))
 ```
 
 Tampilan diagram:
-``` plt.show()
-
+```plt.show()
 ```
 
 **R-Squared**
@@ -102,3 +97,36 @@ mymodel = numpy.poly1d(numpy.polyfit(x, y, 3))
 print(r2_score(y, mymodel(x)))
 ```
 **Note** Hasil 0,94 menunjukkan bahwa ada hubungan yang sangat baik, dan kita dapat menggunakan regresi polinomial dalam memprediksi kedepannya.
+
+**Memperkirakan Nilai selanjutnya **
+Memperkirakan Potensi Nilai di Waktu yang Akan Datang. 
+Sekarang kita dapat menggunakan informasi yang telah kita kumpulkan untuk memprediksi nilai di kemudian hari. 
+Contoh: Misalnya kita ingin memprediksi kecepatan sebuah mobil yang melewati jalan tol sekitaran jam 17:00:
+Untuk melakukan hal tersebut, kita membutuhkan susunan mymodel yang sama dengan contoh di atas:
+
+```
+mymodel = numpy.poly1d(numpy.polyfit(x, y, 3))
+```
+Contoh:
+Predikasi kecepatan mobil yang lewat sekitar jam 17:00 
+```
+import numpy
+from sklearn.metrics import r2_score
+
+x = [1,2,3,5,6,7,8,9,10,12,13,14,15,16,18,19,21,22]
+y = [100,90,80,60,60,55,60,65,70,70,75,76,78,79,90,99,99,100]
+
+mymodel = numpy.poly1d(numpy.polyfit(x, y, 3))
+
+speed = mymodel(17)
+print(speed)
+```
+Contoh tersebut memprediksi kecepatan menjadi 88,87, dimana kecepatan tersebut juga dapat kita lihat pada diagram: 
+
+![img_polynomial_prediction](https://github.com/uin-fah/docs-python/assets/119867794/dbcbb8e1-511e-477a-b361-0ac4d844196a)
+
+
+
+
+
+
