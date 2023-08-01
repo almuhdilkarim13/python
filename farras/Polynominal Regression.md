@@ -131,6 +131,44 @@ Contoh tersebut memprediksi kecepatan menjadi 88,87, dimana kecepatan tersebut j
 
 ![img_polynomial_prediction](https://github.com/uin-fah/docs-python/assets/119867794/dbcbb8e1-511e-477a-b361-0ac4d844196a)
 
+**Tidak Cocok?**
+Kurang Cocok?
+Mari kita buat Contoh di mana regresi polinomial tidak akan menjadi metode terbaik untuk memperkirakan nilai di kemudian hari.
+Contoh: Nilai-nilai ini untuk sumbu x dan y akan menghasilkan nilai yang kurang cocok untuk regresi polinomial
+```
+import numpy
+import matplotlib.pyplot as plt
+
+x = [89,43,36,36,95,10,66,34,38,20,26,29,48,64,6,5,36,66,72,40]
+y = [21,46,3,35,67,95,53,72,58,10,26,34,90,33,38,20,56,2,47,15]
+
+mymodel = numpy.poly1d(numpy.polyfit(x, y, 3))
+
+myline = numpy.linspace(2, 95, 100)
+
+plt.scatter(x, y)
+plt.plot(myline, mymodel(myline))
+plt.show()
+```
+Hasilnya: 
+![img_polynomial_badfit](https://github.com/uin-fah/docs-python/assets/119867794/5ded7084-607f-4edf-a69c-dd83690907ae)
+
+nilai r-kuadrat?
+Contoh:
+Mestinya Anda mendapatkan nilai r-kuadrat yang relatif rendah.
+```
+import numpy
+from sklearn.metrics import r2_score
+
+x = [89,43,36,36,95,10,66,34,38,20,26,29,48,64,6,5,36,66,72,40]
+y = [21,46,3,35,67,95,53,72,58,10,26,34,90,33,38,20,56,2,47,15]
+
+mymodel = numpy.poly1d(numpy.polyfit(x, y, 3))
+
+print(r2_score(y, mymodel(x)))
+```
+
+
 
 
 
