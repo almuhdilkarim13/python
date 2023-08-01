@@ -71,16 +71,18 @@ myline = numpy.linspace(1, 22, 100)
 
 Gambarlah  sebaran plot  aslinya:
 ```
-plt.scatter(x, y)
+plt.scatter(x,y)
 ```
 
  Gambarlah garis regresi polinomial:
 ```
 plt.plot(myline, mymodel(myline))
 ```
+plt.plot(myline, mymodel (myline)
 
-Tampilan diagram:
-```plt.show()
+Tampilan diagram
+```
+plt.show
 ```
 
 **R-Squared**
