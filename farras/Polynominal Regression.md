@@ -64,19 +64,19 @@ NumPy mempunyai metode yang dapat digunakan untuk membuat model polinomial:
 ```
 
 Kemudian, menentukan bagaimana garis akan disajikan, kita mulai dari posisi 1, dan berakhir pada posisi 22:
-```myline = numpy.linspace(1, 22, 100)
+``` myline = numpy.linspace(1, 22, 100)
 ```
 
 Gambarlah  sebaran plot  aslinya:
-```plt.scatter(x, y)
+``` plt.scatter(x, y)
 ```
 
  Gambarlah garis regresi polinomial:
-```plt.plot(myline, mymodel(myline))
+``` plt.plot(myline, mymodel(myline))
 ```
 
 Tampilan diagram:
-```plt.show()
+``` plt.show()
 ```
 
 **R-Squared**
@@ -85,13 +85,11 @@ Hubungan tersebut diukur dengan nilai yang disebut r-kuadrat.
 Nilai r-squared berkisar antara 0 hingga 1, nilai 0 berarti tidak ada hubungan, dan nilai 1 berarti 100% berhubungan.
 Python dan modul Sklearn akan menghitung nilai ini untuk Anda, yang harus Anda lakukan adalah mengisinya dengan data x dan y:
 
-```Contoh
+Contoh
 Bagaimana kecocokan data yang saya miliki dengan regresi polinomial?
-import numpy
+```import numpy
 from sklearn.metrics import r2_score
-```
-
-```x = [1,2,3,5,6,7,8,9,10,12,13,14,15,16,18,19,21,22]
+x = [1,2,3,5,6,7,8,9,10,12,13,14,15,16,18,19,21,22]
 y = [100,90,80,60,60,55,60,65,70,70,75,76,78,79,90,99,99,100]
 
 mymodel = numpy.poly1d(numpy.polyfit(x, y, 3))
