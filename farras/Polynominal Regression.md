@@ -40,7 +40,8 @@ myline = numpy.linspace(1, 22, 100)
 
 plt.scatter(x, y)
 plt.plot(myline, mymodel(myline))
-plt.show()```
+plt.show()
+```
 
 Hasilnya :
 ![img_polynomial_regression](https://github.com/gitfah/docs-python/assets/119867794/07009204-8250-4001-b6f7-76e3817430ed)
@@ -51,25 +52,32 @@ anda dapat memahami tentang modul **Numpy** yang bisa diakses di [tutorial NumPy
 anda bisa mempelajari **SciPy** yang tersedia di [tutorial SciPy] (https://www.w3schools.com/python/scipy_intro.asp)
 
 ```import numpy
-import matplotlib.pyplot as plt```
+import matplotlib.pyplot as plt
+```
 Buatlah susunan yang mewakili nilai sumbu x dan y:
 ```x = [1,2,3,5,6,7,8,9,10,12,13,14,15,16,18,19,21,22]
-y = [100,90,80,60,60,55,60,65,70,70,75,76,78,79,90,99,99,100]```
+y = [100,90,80,60,60,55,60,65,70,70,75,76,78,79,90,99,99,100]
+```
 
 NumPy mempunyai metode yang dapat digunakan untuk membuat model polinomial:
-```mymodel = numpy.poly1d(numpy.polyfit(x, y, 3))```
+```mymodel = numpy.poly1d(numpy.polyfit(x, y, 3))
+```
 
 Kemudian, menentukan bagaimana garis akan disajikan, kita mulai dari posisi 1, dan berakhir pada posisi 22:
-```myline = numpy.linspace(1, 22, 100)```
+```myline = numpy.linspace(1, 22, 100)
+```
 
 Gambarlah  sebaran plot  aslinya:
-```plt.scatter(x, y)```
+```plt.scatter(x, y)
+```
 
  Gambarlah garis regresi polinomial:
-```plt.plot(myline, mymodel(myline))```
+```plt.plot(myline, mymodel(myline))
+```
 
 Tampilan diagram:
-```plt.show()```
+```plt.show()
+```
 
 **R-Squared**
 Penting untuk mengetahui sebarapa besar hubungan antara sumbu x dan sumbu y. Jika tidak ada hubungan, regresi polinomial tidak dapat digunakan untuk memprediksi apa pun.
@@ -80,12 +88,14 @@ Python dan modul Sklearn akan menghitung nilai ini untuk Anda, yang harus Anda l
 ```Contoh
 Bagaimana kecocokan data yang saya miliki dengan regresi polinomial?
 import numpy
-from sklearn.metrics import r2_score```
+from sklearn.metrics import r2_score
+```
 
-x = [1,2,3,5,6,7,8,9,10,12,13,14,15,16,18,19,21,22]
+```x = [1,2,3,5,6,7,8,9,10,12,13,14,15,16,18,19,21,22]
 y = [100,90,80,60,60,55,60,65,70,70,75,76,78,79,90,99,99,100]
 
 mymodel = numpy.poly1d(numpy.polyfit(x, y, 3))
 
-print(r2_score(y, mymodel(x)))```
+print(r2_score(y, mymodel(x)))
+```
 **Note** Hasil 0,94 menunjukkan bahwa ada hubungan yang sangat baik, dan kita dapat menggunakan regresi polinomial dalam memprediksi kedepannya.
