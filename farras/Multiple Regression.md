@@ -32,10 +32,18 @@ X = df[['Weight', 'Volume']]
 y = df['CO2']
 ```
 
-**Tips** Merupakan hal yang lazim untuk memberi nama daftar nilai independen dengan X kapital, dan daftar nilai dependen dengan huruf y kecil.
+**Tips** Merupakan hal yang lumrah untuk memberi nama daftar nilai independen dengan X kapital, dan daftar nilai dependen dengan huruf y kecil.
 
 Kita akan menggunakan beberapa metode dari sklearn modul, jadi kita harus mengunduh modul tersebut :
 
 ```
 from sklearn import linear_model
 ```
+Dari sklearn modul kita akan menggunakan metode LinearRegression() untuk membuat objek regresi linear.
+
+Objek ini memiliki metode yang disebut fit() yang mengambil nilai bebas dan terikat sebagai parameter dan mengisi objek regresi dengan data yang menggambarkan hubungan tersebut: 
+```
+regr = linear_model.LinearRegression()
+regr.fit(X, y)
+```
+Sekarang kita memiliki objek regresi yang siap untuk memprediksi nilai CO2 berdasarkan berat dan volume mobil: 
