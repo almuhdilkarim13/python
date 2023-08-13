@@ -4,8 +4,8 @@ Multiple reggresion mirip dengan [linear regression](https://www.w3schools.com/p
 
 Perhatikan data dibawah ini yang berisikan informasi tentang mobil. 
 
-| Car | Model |
-| ----------- | ----------- |
+| Car | Model | Volume | Weight | CO2 |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
 | Header | Title |
 | Paragraph | Text |
 
@@ -47,3 +47,105 @@ regr = linear_model.LinearRegression()
 regr.fit(X, y)
 ```
 Sekarang kita memiliki objek regresi yang siap untuk memprediksi nilai CO2 berdasarkan berat dan volume mobil: 
+
+```
+#predict the CO2 emission of a car where the weight is 2300kg, and the volume is 1300cm3:
+predictedCO2 = regr.predict([[2300, 1300]])
+```
+
+
+**Contoh**
+Perhatikan seluruh contoh:
+```
+import pandas
+from sklearn import linear_model
+
+df = pandas.read_csv("data.csv")
+
+X = df[['Weight', 'Volume']]
+y = df['CO2']
+
+regr = linear_model.LinearRegression()
+regr.fit(X, y)
+
+#predict the CO2 emission of a car where the weight is 2300kg, and the volume is 1300cm3:
+predictedCO2 = regr.predict([[2300, 1300]])
+
+print(predictedCO2)
+```
+```
+Hasil :
+**[107.2087328]**
+```
+
+## Koefisien
+Koefisien adalah faktor yang menjelaskan relasi dengan variabel yang tidak diketahui.
+
+Contoh: jika x adalah sebuah variabel, maka 2x adalah x dua kali. x adalah variabel yang tidak diketahui, dan angka 2 adalah koefisiennya.
+
+Dalam hal ini, kita dapat mencari nilai koefisien dari berat terhadap CO2, dan volume terhadap CO2. Jawaban yang kita dapatkan memberi tahu kita apa yang akan terjadi jika kita menambah, atau mengurangi, salah satu nilai bebas.
+
+**Contoh**
+Menampilkan nilai koefisien objek regresi:
+```
+import pandas
+from sklearn import linear_model
+
+df = pandas.read_csv("data.csv")
+
+X = df[['Weight', 'Volume']]
+y = df['CO2']
+
+regr = linear_model.LinearRegression()
+regr.fit(X, y)
+
+print(regr.coef_)
+```
+
+```
+Hasilnya:
+**[0.00755095 0.00780526]**
+```
+
+## Penjelasan Hasil
+
+Deretan hasil menunjukkan nilai koefisien berat dan volume.
+
+Berat: 0,00755095
+Volume: 0,00780526
+
+Nilai-nilai ini menunjukkan bahwa jika berat bertambah 1kg, emisi CO2 meningkat sebesar 0,00755095g.
+
+Dan jika ukuran mesin (Volume) bertambah 1 cm3, maka emisi CO2 bertambah 0,00780526 g. Saya pikir ini adalah tebakan yang masuk akal, tetapi mari coba kita uji! Kami telah memperkirakan bahwa jika mobil dengan mesin 1300cm3 memiliki berat 2300kg, maka emisi CO2 yang dihasilkan adalah sekitar 107g.
+
+Bagaimana jika kita menambah bobotnya dengan 1000kg?
+
+**Contoh**
+Salin contoh sebelumnya, tetapi ubah bobotnya dari 2300 menjadi 3300:
+
+```
+import pandas
+from sklearn import linear_model
+
+df = pandas.read_csv("data.csv")
+
+X = df[['Weight', 'Volume']]
+y = df['CO2']
+
+regr = linear_model.LinearRegression()
+regr.fit(X, y)
+
+predictedCO2 = regr.predict([[3300, 1300]])
+
+print(predictedCO2)
+```
+
+```
+Hasil :
+**[114.75968007]**
+```
+Kami telah memprediksi bahwa mobil dengan mesin 1,3 liter, dan berat 3300 kg, akan melepaskan sekitar 115 gram CO2 untuk setiap kilometer yang dikendarai. Hal ini menunjukkan bahwa koefisien 0,00755095 adalah benar:
+
+107.2087328 + (1000 * 0.00755095) = 114.75968
+
+
