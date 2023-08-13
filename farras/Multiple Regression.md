@@ -6,7 +6,7 @@ Perhatikan data dibawah ini yang berisikan informasi tentang mobil.
 
 | Car | Model | Volume | Weight | CO2 |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-| Header | Title |
+| Toyota | Aygo |
 | Paragraph | Text |
 
 Kita dapat memprediksi emisi CO2 dari sebuah mobil berdasarkan besaran mesinnya. Dengan multuple regression kita bisa menambahkan lebih banyak variabel, seperti berat mobil, untuk membuat prediksi yang lebih akurat.
