@@ -5,8 +5,8 @@ When finding documents in a collection, you can filter the result by using a que
 
 The first argument of the find() method is a query object, and is used to limit the search.
 
-ExampleGet your own Python Server
-Find document(s) with the address "Park Lane 38":
+**Example
+Find document(s) with the address "Park Lane 38":**
 
 ```
 import pymongo
@@ -22,10 +22,11 @@ mydoc = mycol.find(myquery)
 for x in mydoc:
   print(x)
 ```
-Advanced Query
+
+**Advanced Query
 To make advanced queries you can use modifiers as values in the query object.
 
-E.g. to find the documents where the "address" field starts with the letter "S" or higher (alphabetically), use the greater than modifier: {"$gt": "S"}:
+E.g. to find the documents where the "address" field starts with the letter "S" or higher (alphabetically), use the greater than modifier: {"$gt": "S"}:**
 
 Example
 Find documents where the address starts with the letter "S" or higher:
