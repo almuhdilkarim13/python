@@ -1,14 +1,14 @@
 # Python MongoDB Sort
 
-**Sort the Result**
+**Sortir Hasil**
 
-Use the sort() method to sort the result in ascending or descending order.
+Gunakan metode sort() untuk mengurutkan hasil dalam urutan menaik atau menurun.
 
-The sort() method takes one parameter for "fieldname" and one parameter for "direction" (ascending is the default direction).
+Metode sort() mengambil satu parameter untuk "nama bidang" dan satu parameter untuk "arah" (menaik adalah arah default).
 
-**Example**
+**Contoh**
 
-Sort the result alphabetically by name:
+Urutkan hasilnya menurut abjad berdasarkan nama:
 ```
 import pymongo
 
@@ -22,18 +22,18 @@ for x in mydoc:
   print(x)
 ```
 
-**Sort Descending**
+**Urutkan Turun**
 
-Use the value -1 as the second parameter to sort descending.
+Gunakan nilai -1 sebagai parameter kedua untuk mengurutkan menurun.
 
 `
 sort("name", 1) #ascending
 sort("name", -1) #descending
 `
 
-**Example**
+**Contoh**
 
-Sort the result reverse alphabetically by name:
+Urutkan hasilnya secara terbalik menurut abjad nama:
 
 ```
 import pymongo
