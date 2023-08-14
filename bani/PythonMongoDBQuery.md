@@ -1,12 +1,12 @@
 # Python MongoDB Query
 
-Filter the Result
-When finding documents in a collection, you can filter the result by using a query object.
+Menyaring Hasil
+Saat menemukan dokumen dalam koleksi, Anda dapat menyaring hasilnya dengan menggunakan objek kueri.
 
-The first argument of the find() method is a query object, and is used to limit the search.
+Argumen pertama dari metode find() adalah objek kueri, dan digunakan untuk membatasi pencarian.
 
-**Example
-Find document(s) with the address "Park Lane 38":**
+**Contoh
+Temukan dokumen dengan alamat "Park Lane 38":**
 
 ```
 import pymongo
@@ -23,12 +23,12 @@ for x in mydoc:
   print(x)
 ```
 
-**Advanced Query
-To make advanced queries you can use modifiers as values in the query object.
-E.g. to find the documents where the "address" field starts with the letter "S" or higher (alphabetically), use the greater than modifier: {"$gt": "S"}:**
+**Kueri Tingkat Lanjut
+Untuk membuat kueri lanjutan, Anda dapat menggunakan pengubah sebagai nilai dalam objek kueri.
+Misalnya, untuk menemukan dokumen di mana bidang "alamat" dimulai dengan huruf "S" atau lebih tinggi (menurut abjad), gunakan pengubah greater than: {"$gt": "S"}:**
 
-**Example
-Find documents where the address starts with the letter "S" or higher:**
+**Contoh
+Temukan dokumen yang alamatnya dimulai dengan huruf "S" atau lebih tinggi:**
 
 ```
 import pymongo
@@ -45,17 +45,17 @@ for x in mydoc:
   print(x)
 ```
 
-**Filter With Regular Expressions
-You can also use regular expressions as a modifier.**
+**Menyaring Dengan Ekspresi Reguler
+Anda juga dapat menggunakan ekspresi reguler sebagai pengubah.**
 
 `
-Regular expressions can only be used to query strings.
+Ekspresi reguler hanya dapat digunakan untuk menanyakan string.
 `
 
-To find only the documents where the "address" field starts with the letter "S", use the regular expression {"$regex": "^S"}:
+Untuk menemukan hanya dokumen yang bidang "alamat" dimulai dengan huruf "S", gunakan ekspresi reguler {"$regex": "^S"}:
 
-**Example
-Find documents where the address starts with the letter "S":**
+**Contoh
+Temukan dokumen yang alamatnya dimulai dengan huruf "S":**
 
 ```
 import pymongo
