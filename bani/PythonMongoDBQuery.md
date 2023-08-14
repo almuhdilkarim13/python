@@ -1,12 +1,14 @@
 # Python MongoDB Query
 
-Menyaring Hasil
+**Menyaring Hasil**
+
 Saat menemukan dokumen dalam koleksi, Anda dapat menyaring hasilnya dengan menggunakan objek kueri.
 
 Argumen pertama dari metode find() adalah objek kueri, dan digunakan untuk membatasi pencarian.
 
-**Contoh
-Temukan dokumen dengan alamat "Park Lane 38":**
+**Contoh**
+
+Temukan dokumen dengan alamat "Park Lane 38":
 
 ```
 import pymongo
@@ -23,12 +25,14 @@ for x in mydoc:
   print(x)
 ```
 
-**Kueri Tingkat Lanjut
-Untuk membuat kueri lanjutan, Anda dapat menggunakan pengubah sebagai nilai dalam objek kueri.
-Misalnya, untuk menemukan dokumen di mana bidang "alamat" dimulai dengan huruf "S" atau lebih tinggi (menurut abjad), gunakan pengubah greater than: {"$gt": "S"}:**
+**Kueri Tingkat Lanjut**
 
-**Contoh
-Temukan dokumen yang alamatnya dimulai dengan huruf "S" atau lebih tinggi:**
+Untuk membuat kueri lanjutan, Anda dapat menggunakan pengubah sebagai nilai dalam objek kueri.
+Misalnya, untuk menemukan dokumen di mana bidang "alamat" dimulai dengan huruf "S" atau lebih tinggi (menurut abjad), gunakan pengubah greater than: {"$gt": "S"}:
+
+**Contoh**
+
+Temukan dokumen yang alamatnya dimulai dengan huruf "S" atau lebih tinggi:
 
 ```
 import pymongo
