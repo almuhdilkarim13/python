@@ -1,14 +1,14 @@
-# Python MongoDB Delete Document
+# Menghapus Dokumen Python MongoDB
 
-**Delete Document**
+**Menghapus Dokumen**
 
-To delete one document, we use the delete_one() method.
+Untuk menghapus satu dokumen, kita menggunakan metode delete_one().
 
-The first parameter of the delete_one() method is a query object defining which document to delete.
+Parameter pertama dari metode delete_one() adalah sebuah objek kueri yang mendefinisikan dokumen mana yang akan dihapus.
 
-**Example**
+**Contoh**
 
-Delete the document with the address "Mountain 21":
+Hapus dokumen dengan alamat "Mountain 21":
 
 ```
 import pymongo
@@ -22,16 +22,16 @@ myquery = { "address": "Mountain 21" }
 mycol.delete_one(myquery)
 ```
 
-**Delete Many Documents**
+**Hapus Banyak Dokumen**
 
-To delete more than one document, use the delete_many() method.
+Untuk menghapus lebih dari satu dokumen, gunakan metode delete_many().
 
-The first parameter of the delete_many() method is a query object defining which documents to delete.
+Parameter pertama dari metode delete_many() adalah sebuah objek kueri yang menentukan dokumen mana yang akan dihapus.
 
 
-**Example**
+**Contoh**
 
-Delete all documents were the address starts with the letter S:
+Hapus semua dokumen yang alamatnya dimulai dengan huruf S:
 
 ```
 import pymongo
@@ -48,13 +48,13 @@ print(x.deleted_count, " documents deleted.")
 ```
 
 
-**Delete All Documents in a Collection**
+**Menghapus Semua Dokumen di dalam Koleksi**
 
-To delete all documents in a collection, pass an empty query object to the delete_many() method:
+Untuk menghapus semua dokumen dalam koleksi, berikan objek kueri kosong ke metode delete_many():
 
-**Example**
+**Contoh**
 
-Delete all documents in the "customers" collection:
+Menghapus semua dokumen dalam koleksi "Costumers":
 
 ```
 import pymongo
