@@ -2,7 +2,7 @@
 
 Python memiliki serangkaian fungsi yang sudah ada di dalamnya.
 
-| **Function**   | **Description**                                                                               |
+|**Fungsi**      | **Deskripsi**                                                                               |
 |----------------|-----------------------------------------------------------------------------------------------|
 | abs()          | Returns the absolute value of a number                                                        |
 | all()          | Returns True if all items in an iterable object are true                                      |
