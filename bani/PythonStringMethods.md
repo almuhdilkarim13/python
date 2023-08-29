@@ -2,7 +2,7 @@
 
 Python memiliki sekumpulan metode bawaan yang dapat Anda gunakan pada string.
 
-| Method         | Description                                                                                   |
+| **Method**     | **Description**                                                                               |
 |----------------|-----------------------------------------------------------------------------------------------|
 | capitalize()   | Converts the first character to upper case                                                    |
 | casefold()     | Converts string into lower case                                                               |
