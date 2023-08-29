@@ -1,4 +1,4 @@
-# Python Metode String 
+# Python String Method
 
 Python memiliki sekumpulan metode bawaan yang dapat Anda gunakan pada string.
 
